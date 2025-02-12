@@ -111,17 +111,3 @@ Daniel Maffezzoli - [GitHub](https://github.com/Maffezzoli)
 ---
 
 ⌨️ com ❤️ por [Daniel Maffezzoli](https://github.com/Maffezzoli)
-
-## 📋 Direitos Autorais
-
-© 2024 Daniel Maffezzoli. Todos os direitos reservados.
-
-Este software é protegido por direitos autorais e é fornecido conforme disponível.
-Nenhuma parte deste software pode ser reproduzida, distribuída ou transmitida em qualquer
-forma ou por qualquer meio, incluindo fotocópia, gravação ou outros métodos eletrônicos
-ou mecânicos, sem a prévia autorização por escrito do autor, exceto no caso de breves
-citações incorporadas em análises críticas e outros usos não comerciais permitidos
-pela lei de direitos autorais.
-
-Para solicitações de permissão, escreva para o autor no endereço:
-danielmaffezzoli.dev@gmail.com
