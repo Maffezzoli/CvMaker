@@ -504,6 +504,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const corPrimariaInput = document.getElementById('corPrimaria');
     const corSecundariaInput = document.getElementById('corSecundaria');
     const fonteSelect = document.getElementById('fonte');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const htmlRoot = document.documentElement;
+
+    // Verificar preferência salva
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    if (darkMode) {
+        htmlRoot.setAttribute('data-theme', 'dark');
+        darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Toggle modo escuro
+    darkModeToggle.addEventListener('click', () => {
+        const isDark = htmlRoot.getAttribute('data-theme') === 'dark';
+        htmlRoot.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        darkModeToggle.querySelector('i').classList.replace(
+            isDark ? 'fa-sun' : 'fa-moon',
+            isDark ? 'fa-moon' : 'fa-sun'
+        );
+        localStorage.setItem('darkMode', !isDark);
+    });
 
     // Event Listeners
     form.querySelectorAll('input, textarea, select').forEach(element => {
@@ -560,12 +580,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funções de Template
     function criarExperienciaHTML() {
         const idioma = document.getElementById('idioma').value;
-        const l = translations[idioma].labels;
+        const t = translations[idioma].labels;
         return `
             <div class="experiencia-item">
                 <div class="d-flex justify-content-end mb-2">
                     <input type="color" class="form-control form-control-color card-color" 
-                           value="#0d6efd" title="${l.cardColor}">
+                           value="#0d6efd" title="${t.cardColor}">
                 </div>
                 <input type="text" class="form-control mb-2" placeholder="Empresa" title="Nome da Empresa">
                 <input type="text" class="form-control mb-2" placeholder="Cargo" title="Cargo">
@@ -578,19 +598,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <textarea class="form-control mb-2" placeholder="Descrição das atividades" title="Descrição"></textarea>
-                <button type="button" class="btn btn-danger btn-sm remove-item">${l.remover}</button>
+                <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.experiencia-item').remove(); atualizarPrevia();">${t.buttons.remove}</button>
             </div>
         `;
     }
 
     function criarEducacaoHTML() {
         const idioma = document.getElementById('idioma').value;
-        const l = translations[idioma].labels;
+        const t = translations[idioma].labels;
         return `
             <div class="educacao-item">
                 <div class="d-flex justify-content-end mb-2">
                     <input type="color" class="form-control form-control-color card-color" 
-                           value="#0d6efd" title="${l.cardColor}">
+                           value="#0d6efd" title="${t.cardColor}">
                 </div>
                 <input type="text" class="form-control mb-2" placeholder="Instituição" title="Instituição">
                 <input type="text" class="form-control mb-2" placeholder="Curso" title="Curso">
@@ -602,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="month" class="form-control" placeholder="Data Fim" title="Data Fim">
                     </div>
                 </div>
-                <button type="button" class="btn btn-danger btn-sm remove-item">${l.remover}</button>
+                <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.educacao-item').remove(); atualizarPrevia();">${t.buttons.remove}</button>
             </div>
         `;
     }
@@ -629,10 +649,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const habilidade = e.target.value.trim();
             const habilidadeElement = document.createElement('span');
             habilidadeElement.className = 'habilidade-tag';
-            habilidadeElement.innerHTML = `
-                ${habilidade}
-                <span class="remover" onclick="this.parentElement.remove(); atualizarPrevia();">&times;</span>
-            `;
+            
+            habilidadeElement.textContent = habilidade;
+            const removerBtn = document.createElement('span');
+            removerBtn.className = 'remover';
+            removerBtn.textContent = '×';
+            habilidadeElement.appendChild(removerBtn);
+            
+            removerBtn.addEventListener('click', function() {
+                habilidadeElement.remove();
+                atualizarPrevia();
+            });
+            
             listaHabilidades.appendChild(habilidadeElement);
             e.target.value = '';
             atualizarPrevia();
@@ -851,8 +879,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        let habilidades = Array.from(document.querySelectorAll('.habilidade-tag'))
-            .map(tag => tag.textContent.trim().replace('×', ''));
+        let habilidades = Array.from(document.querySelectorAll('#listaHabilidades .habilidade-tag'))
+            .map(tag => tag.childNodes[0].nodeValue.trim())
+            .filter(text => text.length > 0);
 
         // Aplicar template e estilos ao preview
         previewContainer.style.setProperty('--cor-primaria', corPrimaria);
@@ -924,9 +953,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ${habilidades.length ? `
                 <h2>${t.titles.skills}</h2>
                 <div class="habilidades-container">
-                    ${habilidades.map(hab => `
-                        <span class="habilidade-tag">${hab}</span>
-                    `).join('')}
+                    ${habilidades
+                        .map(hab => `<span class="habilidade-tag">${hab}</span>`).join('')}
                 </div>
             ` : ''}
         `;
@@ -1027,10 +1055,18 @@ document.addEventListener('DOMContentLoaded', function() {
         dados.habilidades.forEach(hab => {
             const habilidadeElement = document.createElement('span');
             habilidadeElement.className = 'habilidade-tag';
-            habilidadeElement.innerHTML = `
-                ${hab}
-                <span class="remover" onclick="this.parentElement.remove(); atualizarPrevia();">&times;</span>
-            `;
+            
+            habilidadeElement.textContent = hab;
+            const removerBtn = document.createElement('span');
+            removerBtn.className = 'remover';
+            removerBtn.textContent = '×';
+            habilidadeElement.appendChild(removerBtn);
+            
+            removerBtn.addEventListener('click', function() {
+                habilidadeElement.remove();
+                atualizarPrevia();
+            });
+            
             listaHabilidades.appendChild(habilidadeElement);
         });
 

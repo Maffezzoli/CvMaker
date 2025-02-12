@@ -80,6 +80,7 @@ body {
     border-radius: 15px;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .habilidade-tag:hover {
@@ -102,6 +103,10 @@ body {
     color: #dc3545;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .habilidade-tag .remover:hover {
@@ -230,17 +235,18 @@ body {
     background: linear-gradient(to right, rgba(var(--card-color-rgb), 0.05), transparent);
     padding: 1rem;
     border-radius: 0 8px 8px 0;
+    max-width: 100%;
 }
 
 .educacao-entry h3 {
     color: var(--card-color, var(--cor-primaria));
     margin-bottom: 0.3rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .educacao-entry h4 {
     color: #495057;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
@@ -259,6 +265,7 @@ body {
     background: linear-gradient(to right, rgba(var(--card-color-rgb), 0.05), transparent);
     padding: 1rem;
     border-radius: 0 8px 8px 0;
+    max-width: 100%;
 }
 
 .experiencia-entry:hover {
@@ -268,26 +275,30 @@ body {
 .experiencia-entry h3 {
     color: var(--card-color, var(--cor-primaria));
     margin-bottom: 0.3rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .experiencia-entry h4 {
     color: #495057;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
 .experiencia-entry .periodo {
     color: #6c757d;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-style: italic;
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .experiencia-entry .descricao {
     color: #212529;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.5;
+    white-space: normal;
 }
 
 /* Estilo para o seletor de cor do card */
@@ -538,4 +549,107 @@ body {
 /* Garantir que links e elementos de destaque usem a cor primária */
 a, .text-primary {
     color: var(--cor-primaria);
+}
+
+/* Modo Escuro */
+[data-theme="dark"] {
+    background: #1a1a1a !important;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] body {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .form-section,
+[data-theme="dark"] .preview-container {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .header-personalizacao {
+    background: #2d2d2d;
+}
+
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-control {
+    background-color: #3d3d3d;
+    border-color: #4d4d4d;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .section-group {
+    background: #3d3d3d;
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] .experiencia-item,
+[data-theme="dark"] .educacao-item {
+    background: #2d2d2d;
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] .habilidade-tag {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+    color: #e0e0e0;
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+    background-color: #4d4d4d;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .foto-preview {
+    background-color: #3d3d3d;
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] .foto-preview.empty::after {
+    color: #a0a0a0;
+}
+
+[data-theme="dark"] .btn {
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+[data-theme="dark"] .btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+[data-theme="dark"] .btn-info {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+
+[data-theme="dark"] input[type="file"]::file-selector-button {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+    border-color: #4d4d4d;
+}
+
+[data-theme="dark"] input[type="file"]:hover::file-selector-button {
+    background-color: #4d4d4d;
+}
+
+/* Quebra de linha automática apenas para o resumo profissional */
+.preview-container h2 + p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Ajuste para o ícone e texto "atual" */
+.periodo i {
+    margin-right: 5px;
 } 

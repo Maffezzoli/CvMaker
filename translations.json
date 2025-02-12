@@ -1,0 +1,486 @@
+{
+    "pt-BR": {
+        "pageTitle": "Gerador de Currículos",
+        "customization": {
+            "selectLanguage": "Selecione o idioma",
+            "selectTemplate": "Selecione o template",
+            "primaryColor": "Escolha a cor primária",
+            "secondaryColor": "Escolha a cor secundária",
+            "selectFont": "Selecione a fonte",
+            "fontGroups": {
+                "sansSerif": "Sans Serif",
+                "serif": "Serif",
+                "monospace": "Monospace"
+            }
+        },
+        "titles": {
+            "experience": "Experiência Profissional",
+            "education": "Educação",
+            "skills": "Habilidades",
+            "summary": "Resumo Profissional",
+            "contact": "Informações de Contato",
+            "customize": "Personalização",
+            "mainTitle": "Informações do Currículo",
+            "personalInfo": "Informações Pessoais",
+            "professionalSummary": "Resumo Profissional",
+            "professionalExperience": "Experiência Profissional"
+        },
+        "labels": {
+            "email": "Email",
+            "phone": "Telefone",
+            "address": "Endereço",
+            "current": "Atual",
+            "template": "Template",
+            "primaryColor": "Cor Primária",
+            "secondaryColor": "Cor Secundária",
+            "font": "Fonte",
+            "templates": {
+                "minimal": "Minimalista",
+                "professional": "Profissional",
+                "modern": "Moderno",
+                "creative": "Criativo",
+                "elegant": "Elegante",
+                "bold": "Arrojado",
+                "tech": "Tecnológico",
+                "classic": "Clássico"
+            },
+            "formSections": {
+                "personalInfo": "Informações Pessoais",
+                "professionalSummary": "Resumo Profissional",
+                "experience": "Experiência Profissional",
+                "education": "Educação",
+                "skills": "Habilidades"
+            },
+            "inputs": {
+                "name": "Nome Completo*",
+                "email": "E-mail*",
+                "phone": "Telefone*",
+                "address": "Endereço",
+                "linkedin": "LinkedIn",
+                "photo": "Foto de Perfil",
+                "chooseFile": "Escolher arquivo",
+                "photoSize": "Tamanho máximo: 2MB",
+                "summary": "Resumo",
+                "summaryPlaceholder": "Breve descrição sobre você e seus objetivos profissionais",
+                "company": "Empresa",
+                "position": "Cargo",
+                "startDate": "Data Início",
+                "endDate": "Data Fim",
+                "description": "Descrição das atividades",
+                "institution": "Instituição",
+                "course": "Curso",
+                "skillsPlaceholder": "Digite uma habilidade e pressione Enter"
+            },
+            "buttons": {
+                "addExperience": "+ Adicionar Experiência",
+                "addEducation": "+ Adicionar Educação",
+                "generatePDF": "Gerar PDF",
+                "save": "Salvar Localmente",
+                "load": "Carregar Dados Salvos",
+                "remove": "Remover"
+            },
+            "alerts": {
+                "photoSize": "A foto deve ter no máximo 2MB",
+                "dataSaved": "Dados salvos com sucesso!",
+                "dataLoaded": "Dados carregados com sucesso!",
+                "noData": "Nenhum dado salvo encontrado!",
+                "pdfError": "Erro ao gerar o PDF. Por favor, tente novamente."
+            },
+            "cardColor": "Escolha a cor do card",
+            "requiredField": "Campo obrigatório",
+            "preview": "Prévia",
+            "form": {
+                "title": "Informações do Currículo",
+                "required": "*Campos obrigatórios"
+            },
+            "placeholders": {
+                "company": "Empresa",
+                "position": "Cargo",
+                "startDate": "Data Início",
+                "endDate": "Data Fim",
+                "activities": "Descrição das atividades",
+                "institution": "Instituição",
+                "course": "Curso",
+                "enterName": "Digite seu nome completo",
+                "enterEmail": "seu@email.com",
+                "enterPhone": "(00) 00000-0000",
+                "enterAddress": "Cidade, Estado",
+                "enterLinkedIn": "https://linkedin.com/in/seu-perfil",
+                "enterSkill": "Digite uma habilidade e pressione Enter",
+                "month": "Mês",
+                "year": "Ano"
+            },
+            "photo": {
+                "preview": "Foto",
+                "maxSize": "Tamanho máximo: 2MB"
+            },
+            "required": {
+                "field": "Campo obrigatório",
+                "marker": "*"
+            }
+        }
+    },
+    "en": {
+        "pageTitle": "Resume Generator",
+        "customization": {
+            "selectLanguage": "Select language",
+            "selectTemplate": "Select template",
+            "primaryColor": "Choose primary color",
+            "secondaryColor": "Choose secondary color",
+            "selectFont": "Select font",
+            "fontGroups": {
+                "sansSerif": "Sans Serif",
+                "serif": "Serif",
+                "monospace": "Monospace"
+            }
+        },
+        "titles": {
+            "experience": "Professional Experience",
+            "education": "Education",
+            "skills": "Skills",
+            "summary": "Professional Summary",
+            "contact": "Contact Information",
+            "customize": "Customization",
+            "mainTitle": "Resume Information",
+            "personalInfo": "Personal Information",
+            "professionalSummary": "Professional Summary",
+            "professionalExperience": "Professional Experience"
+        },
+        "labels": {
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address",
+            "current": "Current",
+            "template": "Template",
+            "primaryColor": "Primary Color",
+            "secondaryColor": "Secondary Color",
+            "font": "Font",
+            "templates": {
+                "minimal": "Minimalist",
+                "professional": "Professional",
+                "modern": "Modern",
+                "creative": "Creative",
+                "elegant": "Elegant",
+                "bold": "Bold",
+                "tech": "Tech",
+                "classic": "Classic"
+            },
+            "formSections": {
+                "personalInfo": "Personal Information",
+                "professionalSummary": "Professional Summary",
+                "experience": "Professional Experience",
+                "education": "Education",
+                "skills": "Skills"
+            },
+            "inputs": {
+                "name": "Full Name*",
+                "email": "Email*",
+                "phone": "Phone*",
+                "address": "Address",
+                "linkedin": "LinkedIn",
+                "photo": "Profile Photo",
+                "chooseFile": "Choose file",
+                "photoSize": "Maximum size: 2MB",
+                "summary": "Summary",
+                "summaryPlaceholder": "Brief description about you and your professional goals",
+                "company": "Company",
+                "position": "Position",
+                "startDate": "Start Date",
+                "endDate": "End Date",
+                "description": "Description of activities",
+                "institution": "Institution",
+                "course": "Course",
+                "skillsPlaceholder": "Type a skill and press Enter"
+            },
+            "buttons": {
+                "addExperience": "+ Add Experience",
+                "addEducation": "+ Add Education",
+                "generatePDF": "Generate PDF",
+                "save": "Save Locally",
+                "load": "Load Saved Data",
+                "remove": "Remove"
+            },
+            "alerts": {
+                "photoSize": "Photo must be at most 2MB",
+                "dataSaved": "Data saved successfully!",
+                "dataLoaded": "Data loaded successfully!",
+                "noData": "No saved data found!",
+                "pdfError": "Error generating PDF. Please try again."
+            },
+            "cardColor": "Choose card color",
+            "requiredField": "Required field",
+            "preview": "Preview",
+            "form": {
+                "title": "Resume Information",
+                "required": "*Required fields"
+            },
+            "placeholders": {
+                "company": "Company",
+                "position": "Position",
+                "startDate": "Start Date",
+                "endDate": "End Date",
+                "activities": "Description of activities",
+                "institution": "Institution",
+                "course": "Course",
+                "enterName": "Enter your full name",
+                "enterEmail": "your@email.com",
+                "enterPhone": "Phone number",
+                "enterAddress": "City, State",
+                "enterLinkedIn": "https://linkedin.com/in/your-profile",
+                "enterSkill": "Type a skill and press Enter",
+                "month": "Month",
+                "year": "Year"
+            },
+            "photo": {
+                "preview": "Photo",
+                "maxSize": "Maximum size: 2MB"
+            },
+            "required": {
+                "field": "Required field",
+                "marker": "*"
+            }
+        }
+    },
+    "es": {
+        "pageTitle": "Generador de Currículum",
+        "customization": {
+            "selectLanguage": "Seleccionar idioma",
+            "selectTemplate": "Seleccionar plantilla",
+            "primaryColor": "Elegir color primario",
+            "secondaryColor": "Elegir color secundario",
+            "selectFont": "Seleccionar fuente",
+            "fontGroups": {
+                "sansSerif": "Sans Serif",
+                "serif": "Serif",
+                "monospace": "Monospace"
+            }
+        },
+        "titles": {
+            "experience": "Experiencia Profesional",
+            "education": "Educación",
+            "skills": "Habilidades",
+            "summary": "Resumen Profesional",
+            "contact": "Información de Contacto",
+            "customize": "Personalización",
+            "mainTitle": "Información del Currículum",
+            "personalInfo": "Información Personal",
+            "professionalSummary": "Resumen Profesional",
+            "professionalExperience": "Experiencia Profesional"
+        },
+        "labels": {
+            "email": "Correo",
+            "phone": "Teléfono",
+            "address": "Dirección",
+            "current": "Actual",
+            "template": "Plantilla",
+            "primaryColor": "Color Primario",
+            "secondaryColor": "Color Secundario",
+            "font": "Fuente",
+            "templates": {
+                "minimal": "Minimalista",
+                "professional": "Profesional",
+                "modern": "Moderno",
+                "creative": "Creativo",
+                "elegant": "Elegante",
+                "bold": "Audaz",
+                "tech": "Tecnológico",
+                "classic": "Clásico"
+            },
+            "formSections": {
+                "personalInfo": "Información Personal",
+                "professionalSummary": "Resumen Profesional",
+                "experience": "Experiencia Profesional",
+                "education": "Educación",
+                "skills": "Habilidades"
+            },
+            "inputs": {
+                "name": "Nombre Completo*",
+                "email": "Correo*",
+                "phone": "Teléfono*",
+                "address": "Dirección",
+                "linkedin": "LinkedIn",
+                "photo": "Foto de Perfil",
+                "chooseFile": "Elegir archivo",
+                "photoSize": "Tamaño máximo: 2MB",
+                "summary": "Resumen",
+                "summaryPlaceholder": "Breve descripción sobre ti y tus objetivos profesionales",
+                "company": "Empresa",
+                "position": "Cargo",
+                "startDate": "Fecha de Inicio",
+                "endDate": "Fecha de Fin",
+                "description": "Descripción de actividades",
+                "institution": "Institución",
+                "course": "Curso",
+                "skillsPlaceholder": "Escribe una habilidad y presiona Enter"
+            },
+            "buttons": {
+                "addExperience": "+ Agregar Experiencia",
+                "addEducation": "+ Agregar Educación",
+                "generatePDF": "Generar PDF",
+                "save": "Guardar Localmente",
+                "load": "Cargar Datos Guardados",
+                "remove": "Eliminar"
+            },
+            "alerts": {
+                "photoSize": "La foto debe tener máximo 2MB",
+                "dataSaved": "¡Datos guardados con éxito!",
+                "dataLoaded": "¡Datos cargados con éxito!",
+                "noData": "¡No se encontraron datos guardados!",
+                "pdfError": "Error al generar PDF. Por favor, intente nuevamente."
+            },
+            "cardColor": "Elegir color de tarjeta",
+            "requiredField": "Campo requerido",
+            "preview": "Vista previa",
+            "form": {
+                "title": "Información del Currículum",
+                "required": "*Campos requeridos"
+            },
+            "placeholders": {
+                "company": "Empresa",
+                "position": "Cargo",
+                "startDate": "Fecha de Inicio",
+                "endDate": "Fecha de Fin",
+                "activities": "Descripción de actividades",
+                "institution": "Institución",
+                "course": "Curso",
+                "enterName": "Ingresa tu nombre completo",
+                "enterEmail": "tu@correo.com",
+                "enterPhone": "Número de teléfono",
+                "enterAddress": "Ciudad, Estado",
+                "enterLinkedIn": "https://linkedin.com/in/tu-perfil",
+                "enterSkill": "Escribe una habilidad y presiona Enter",
+                "month": "Mes",
+                "year": "Año"
+            },
+            "photo": {
+                "preview": "Foto",
+                "maxSize": "Tamaño máximo: 2MB"
+            },
+            "required": {
+                "field": "Campo requerido",
+                "marker": "*"
+            }
+        }
+    },
+    "zh": {
+        "pageTitle": "简历生成器",
+        "customization": {
+            "selectLanguage": "选择语言",
+            "selectTemplate": "选择模板",
+            "primaryColor": "选择主要颜色",
+            "secondaryColor": "选择次要颜色",
+            "selectFont": "选择字体",
+            "fontGroups": {
+                "sansSerif": "无衬线字体",
+                "serif": "衬线字体",
+                "monospace": "等宽字体"
+            }
+        },
+        "titles": {
+            "experience": "工作经验",
+            "education": "教育背景",
+            "skills": "技能",
+            "summary": "个人简介",
+            "contact": "联系方式",
+            "customize": "个性化设置",
+            "mainTitle": "简历信息",
+            "personalInfo": "个人信息",
+            "professionalSummary": "个人简介",
+            "professionalExperience": "工作经验"
+        },
+        "labels": {
+            "email": "邮箱",
+            "phone": "电话",
+            "address": "地址",
+            "current": "至今",
+            "template": "模板",
+            "primaryColor": "主要颜色",
+            "secondaryColor": "次要颜色",
+            "font": "字体",
+            "templates": {
+                "minimal": "简约",
+                "professional": "专业",
+                "modern": "现代",
+                "creative": "创意",
+                "elegant": "优雅",
+                "bold": "大胆",
+                "tech": "科技",
+                "classic": "经典"
+            },
+            "formSections": {
+                "personalInfo": "个人信息",
+                "professionalSummary": "个人简介",
+                "experience": "工作经验",
+                "education": "教育背景",
+                "skills": "技能"
+            },
+            "inputs": {
+                "name": "姓名*",
+                "email": "邮箱*",
+                "phone": "电话*",
+                "address": "地址",
+                "linkedin": "领英",
+                "photo": "头像",
+                "chooseFile": "选择文件",
+                "photoSize": "最大尺寸：2MB",
+                "summary": "简介",
+                "summaryPlaceholder": "简要描述你自己和你的职业目标",
+                "company": "公司",
+                "position": "职位",
+                "startDate": "开始日期",
+                "endDate": "结束日期",
+                "description": "工作描述",
+                "institution": "学校",
+                "course": "专业",
+                "skillsPlaceholder": "输入技能并按回车"
+            },
+            "buttons": {
+                "addExperience": "+ 添加工作经验",
+                "addEducation": "+ 添加教育经历",
+                "generatePDF": "生成PDF",
+                "save": "本地保存",
+                "load": "加载保存数据",
+                "remove": "删除"
+            },
+            "alerts": {
+                "photoSize": "照片必须小于2MB",
+                "dataSaved": "数据保存成功！",
+                "dataLoaded": "数据加载成功！",
+                "noData": "未找到保存的数据！",
+                "pdfError": "生成PDF时出错。请重试。"
+            },
+            "cardColor": "选择卡片颜色",
+            "requiredField": "必填项",
+            "preview": "预览",
+            "form": {
+                "title": "简历信息",
+                "required": "*必填项"
+            },
+            "placeholders": {
+                "company": "公司",
+                "position": "职位",
+                "startDate": "开始日期",
+                "endDate": "结束日期",
+                "activities": "工作描述",
+                "institution": "学校",
+                "course": "专业",
+                "enterName": "输入你的全名",
+                "enterEmail": "your@email.com",
+                "enterPhone": "电话号码",
+                "enterAddress": "城市，省份",
+                "enterLinkedIn": "https://linkedin.com/in/your-profile",
+                "enterSkill": "输入技能并按回车",
+                "month": "月份",
+                "year": "年份"
+            },
+            "photo": {
+                "preview": "照片",
+                "maxSize": "最大尺寸：2MB"
+            },
+            "required": {
+                "field": "必填项",
+                "marker": "*"
+            }
+        }
+    }
+} 
