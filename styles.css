@@ -1,0 +1,528 @@
+/* Fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Fira+Code:wght@300;400;500&family=Source+Code+Pro:wght@300;400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+    --gradient-primary: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    --gradient-light: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    --font-chinese: 'Noto Sans SC', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+    padding: 20px;
+}
+
+.form-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.preview-section {
+    position: sticky;
+    top: 20px;
+}
+
+.preview-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+    min-height: 800px;
+}
+
+.section-group {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--gradient-light);
+}
+
+.section-group h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.experiencia-item, .educacao-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.habilidade-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.habilidade-tag:hover {
+    background-color: #dee2e6;
+}
+
+.habilidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+.habilidade-tag .remover {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #dc3545;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.habilidade-tag .remover:hover {
+    opacity: 1;
+}
+
+/* Templates */
+.template-minimal {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.template-minimal h1 {
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 10px;
+}
+
+.template-professional {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.8;
+}
+
+.template-professional h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+}
+
+.template-modern {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.template-modern h1 {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
+}
+
+.template-creative {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.template-creative h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.template-creative h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+@media (max-width: 768px) {
+    .preview-section {
+        margin-top: 20px;
+        position: static;
+    }
+    
+    .form-section {
+        max-height: none;
+        overflow-y: visible;
+    }
+}
+
+.foto-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.foto-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-preview.empty::after {
+    content: attr(data-content);
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.educacao-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.educacao-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.periodo-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.periodo-container::before {
+    content: '•';
+    color: var(--cor-primaria, #0d6efd);
+}
+
+/* Estilos para a visualização da educação no currículo */
+.educacao-entry {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--card-color, var(--cor-primaria));
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, rgba(var(--card-color-rgb), 0.05), transparent);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.educacao-entry h3 {
+    color: var(--card-color, var(--cor-primaria));
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.educacao-entry h4 {
+    color: #495057;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.educacao-entry .periodo {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Estilos para os cards de experiência */
+.experiencia-entry {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--card-color, var(--cor-primaria));
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, rgba(var(--card-color-rgb), 0.05), transparent);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.experiencia-entry:hover {
+    border-left-color: var(--cor-secundaria, #6610f2);
+}
+
+.experiencia-entry h3 {
+    color: var(--card-color, var(--cor-primaria));
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.experiencia-entry h4 {
+    color: #495057;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.experiencia-entry .periodo {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.experiencia-entry .descricao {
+    color: #212529;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Estilo para o seletor de cor do card */
+.card-color {
+    width: 50px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+/* Template Elegante */
+.template-elegant {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.template-elegant h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.template-elegant h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60%;
+    height: 1px;
+    background: var(--gradient-primary);
+}
+
+.template-elegant h2 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.template-elegant .experiencia-entry,
+.template-elegant .educacao-entry {
+    border-left: none;
+    border-bottom: 1px solid rgba(var(--card-color-rgb), 0.2);
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 1.5rem;
+    background: none;
+}
+
+/* Template Arrojado */
+.template-bold {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #ffffff 0%, #f8f9fa 100%);
+}
+
+.template-bold h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.template-bold h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.template-bold .experiencia-entry,
+.template-bold .educacao-entry {
+    border-left: 5px solid var(--card-color);
+    box-shadow: 0 3px 10px rgba(var(--card-color-rgb), 0.1);
+    background: white;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.template-bold .experiencia-entry:hover,
+.template-bold .educacao-entry:hover {
+    transform: translateX(10px);
+}
+
+/* Template Tecnológico */
+.template-tech {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    padding: 2rem;
+}
+
+.template-tech h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 1rem;
+}
+
+.template-tech h1::before {
+    content: '> ';
+    color: var(--cor-secundaria);
+}
+
+.template-tech h2 {
+    color: var(--cor-secundaria);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.template-tech h2::before {
+    content: '## ';
+    color: var(--cor-primaria);
+}
+
+.template-tech .experiencia-entry,
+.template-tech .educacao-entry {
+    border: 1px solid var(--card-color);
+    background: rgba(var(--card-color-rgb), 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Template Clássico */
+.template-classic {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #333;
+    padding: 2rem;
+}
+
+.template-classic h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+    font-weight: normal;
+}
+
+.template-classic .contato-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.template-classic h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.template-classic .experiencia-entry,
+.template-classic .educacao-entry {
+    border-left: none;
+    border-bottom: 1px solid rgba(var(--card-color-rgb), 0.3);
+    margin-left: 0;
+    padding-left: 0;
+    background: none;
+}
+
+.template-classic .periodo {
+    font-style: italic;
+    color: var(--card-color);
+}
+
+/* Ajustes gerais para todos os templates */
+.preview-container {
+    transition: all 0.3s ease;
+}
+
+.preview-container h1,
+.preview-container h2,
+.preview-container h3 {
+    transition: all 0.3s ease;
+}
+
+.experiencia-entry,
+.educacao-entry {
+    transition: all 0.3s ease;
+}
+
+/* Suporte a idiomas */
+[lang="zh"] {
+    font-family: var(--font-chinese);
+}
+
+[lang="zh"] h1,
+[lang="zh"] h2,
+[lang="zh"] h3 {
+    font-family: var(--font-chinese);
+    letter-spacing: 0;
+}
+
+[lang="zh"] .template-tech h1::before {
+    content: '》';
+}
+
+[lang="zh"] .template-tech h2::before {
+    content: '》》';
+}
+
+/* Header de personalização */
+.header-personalizacao {
+    background: var(--gradient-primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-personalizacao .form-select,
+.header-personalizacao .form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 0.9rem;
+}
+
+.header-personalizacao .form-select:focus,
+.header-personalizacao .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+} 

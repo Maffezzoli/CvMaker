@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículos</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com opções de personalização -->
+    <header class="header-personalizacao py-3 mb-4">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <select class="form-select" id="idioma" title="Selecione o idioma">
+                        <option value="pt-BR">🇧🇷 Português</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="zh">🇨🇳 中文</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="template" title="Selecione o template">
+                        <option value="minimal">Minimalista</option>
+                        <option value="professional">Profissional</option>
+                        <option value="modern">Moderno</option>
+                        <option value="creative">Criativo</option>
+                        <option value="elegant">Elegante</option>
+                        <option value="bold">Arrojado</option>
+                        <option value="tech">Tecnológico</option>
+                        <option value="classic">Clássico</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex align-items-center">
+                        <input type="color" class="form-control form-control-color me-2" id="corPrimaria" 
+                               value="#0d6efd" title="Escolha a cor primária">
+                        <input type="color" class="form-control form-control-color" id="corSecundaria" 
+                               value="#6610f2" title="Escolha a cor secundária">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="fonte" title="Selecione a fonte">
+                        <optgroup label="Sans Serif">
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'Roboto', sans-serif">Roboto</option>
+                            <option value="'Open Sans', sans-serif">Open Sans</option>
+                            <option value="'Montserrat', sans-serif">Montserrat</option>
+                            <option value="'Poppins', sans-serif">Poppins</option>
+                            <option value="'Lato', sans-serif">Lato</option>
+                        </optgroup>
+                        <optgroup label="Serif">
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="'Playfair Display', serif">Playfair Display</option>
+                            <option value="'Merriweather', serif">Merriweather</option>
+                        </optgroup>
+                        <optgroup label="Monospace">
+                            <option value="'Fira Code', monospace">Fira Code</option>
+                            <option value="'Source Code Pro', monospace">Source Code Pro</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Formulário -->
+            <div class="col-md-6 form-section">
+                <h2>Informações do Currículo</h2>
+                <form id="cvForm">
+                    <!-- Informações Pessoais -->
+                    <div class="section-group mb-4">
+                        <h3>Informações Pessoais</h3>
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">Foto de Perfil</label>
+                            <div class="d-flex align-items-center">
+                                <div class="foto-preview me-3" id="fotoPreview"></div>
+                                <div>
+                                    <input type="file" class="form-control" id="foto" 
+                                           accept="image/*" title="Foto de Perfil">
+                                    <small class="text-muted">Tamanho máximo: 2MB</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome Completo*</label>
+                            <input type="text" class="form-control" id="nome" required 
+                                   placeholder="Digite seu nome completo" title="Nome Completo">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail*</label>
+                            <input type="email" class="form-control" id="email" required 
+                                   placeholder="seu@email.com" title="E-mail">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone*</label>
+                            <input type="tel" class="form-control" id="telefone" required 
+                                   placeholder="(00) 00000-0000" title="Telefone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="endereco" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" 
+                                   placeholder="Cidade, Estado" title="Endereço">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">LinkedIn</label>
+                            <input type="url" class="form-control" id="linkedin" 
+                                   placeholder="https://linkedin.com/in/seu-perfil" title="LinkedIn">
+                        </div>
+                    </div>
+
+                    <!-- Resumo Profissional -->
+                    <div class="section-group mb-4">
+                        <h3>Resumo Profissional</h3>
+                        <div class="mb-3">
+                            <label for="resumo" class="form-label">Resumo</label>
+                            <textarea class="form-control" id="resumo" rows="3" 
+                                    placeholder="Breve descrição sobre você e seus objetivos profissionais"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Experiência -->
+                    <div class="section-group mb-4">
+                        <h3>Experiência Profissional</h3>
+                        <div id="experiencias">
+                            <div class="experiencia-item">
+                                <div class="d-flex justify-content-end mb-2">
+                                    <input type="color" class="form-control form-control-color card-color" 
+                                           value="#0d6efd" title="Escolha a cor do card">
+                                </div>
+                                <input type="text" class="form-control mb-2" placeholder="Empresa" title="Nome da Empresa">
+                                <input type="text" class="form-control mb-2" placeholder="Cargo" title="Cargo">
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <input type="month" class="form-control" placeholder="Data Início" title="Data Início">
+                                    </div>
+                                    <div class="col">
+                                        <input type="month" class="form-control" placeholder="Data Fim" title="Data Fim">
+                                    </div>
+                                </div>
+                                <textarea class="form-control mb-2" placeholder="Descrição das atividades" title="Descrição"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="addExperiencia">+ Adicionar Experiência</button>
+                    </div>
+
+                    <!-- Educação -->
+                    <div class="section-group mb-4">
+                        <h3>Educação</h3>
+                        <div id="educacao">
+                            <div class="educacao-item">
+                                <div class="d-flex justify-content-end mb-2">
+                                    <input type="color" class="form-control form-control-color card-color" 
+                                           value="#0d6efd" title="Escolha a cor do card">
+                                </div>
+                                <input type="text" class="form-control mb-2" placeholder="Instituição" title="Instituição">
+                                <input type="text" class="form-control mb-2" placeholder="Curso" title="Curso">
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <input type="month" class="form-control" placeholder="Data Início" title="Data Início">
+                                    </div>
+                                    <div class="col">
+                                        <input type="month" class="form-control" placeholder="Data Fim" title="Data Fim">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="addEducacao">+ Adicionar Educação</button>
+                    </div>
+
+                    <!-- Habilidades -->
+                    <div class="section-group mb-4">
+                        <h3>Habilidades</h3>
+                        <div id="habilidades">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="novaHabilidade" 
+                                       placeholder="Digite uma habilidade e pressione Enter" title="Nova Habilidade">
+                            </div>
+                            <div id="listaHabilidades" class="mb-3">
+                                <!-- Habilidades serão adicionadas aqui dinamicamente -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary" id="gerarPDF">Gerar PDF</button>
+                        <button type="button" class="btn btn-success" id="salvarLocal">Salvar Localmente</button>
+                        <button type="button" class="btn btn-info" id="carregarLocal">Carregar Dados Salvos</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Prévia -->
+            <div class="col-md-6 preview-section">
+                <div id="curriculo-preview" class="preview-container">
+                    <!-- O conteúdo será preenchido dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        window.jspdf = window.jspdf || {};
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
