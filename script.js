@@ -501,6 +501,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const templateSelect = document.getElementById('template');
     const fotoInput = document.getElementById('foto');
     const fotoPreview = document.getElementById('fotoPreview');
+    const corPrimariaInput = document.getElementById('corPrimaria');
+    const corSecundariaInput = document.getElementById('corSecundaria');
+    const fonteSelect = document.getElementById('fonte');
 
     // Event Listeners
     form.querySelectorAll('input, textarea, select').forEach(element => {
@@ -547,6 +550,12 @@ document.addEventListener('DOMContentLoaded', function() {
         atualizarPlaceholders();
         atualizarLabelsPersonalizacao();
     });
+
+    // Event listeners para as opções do header
+    corPrimariaInput.addEventListener('input', atualizarPrevia);
+    corSecundariaInput.addEventListener('input', atualizarPrevia);
+    fonteSelect.addEventListener('change', atualizarPrevia);
+    templateSelect.addEventListener('change', atualizarPrevia);
 
     // Funções de Template
     function criarExperienciaHTML() {
@@ -842,12 +851,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        let habilidades = Array.from(listaHabilidades.querySelectorAll('.habilidade-tag'))
+        let habilidades = Array.from(document.querySelectorAll('.habilidade-tag'))
             .map(tag => tag.textContent.trim().replace('×', ''));
 
-        // Aplicar template e estilos
+        // Aplicar template e estilos ao preview
         previewContainer.style.setProperty('--cor-primaria', corPrimaria);
         previewContainer.style.setProperty('--cor-secundaria', corSecundaria);
+        previewContainer.style.setProperty('--gradient-primary', 
+            `linear-gradient(135deg, ${corPrimaria} 0%, ${corSecundaria} 100%)`);
         previewContainer.style.fontFamily = fonte;
         previewContainer.className = `preview-container template-${template}`;
         previewContainer.setAttribute('lang', idioma);

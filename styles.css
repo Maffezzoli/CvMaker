@@ -3,6 +3,8 @@
 
 /* Variáveis CSS */
 :root {
+    --cor-primaria: #0d6efd;
+    --cor-secundaria: #6610f2;
     --gradient-primary: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
     --gradient-light: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     --font-chinese: 'Noto Sans SC', sans-serif;
@@ -508,7 +510,7 @@ body {
 
 /* Header de personalização */
 .header-personalizacao {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -525,4 +527,15 @@ body {
 .header-personalizacao .form-select:focus,
 .header-personalizacao .form-control:focus {
     box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+/* Garantir que os botões usem a cor primária */
+.btn-primary {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+/* Garantir que links e elementos de destaque usem a cor primária */
+a, .text-primary {
+    color: var(--cor-primaria);
 } 
