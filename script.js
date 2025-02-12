@@ -583,9 +583,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const t = translations[idioma].labels;
         return `
             <div class="experiencia-item">
-                <div class="d-flex justify-content-end mb-2">
+                <div class="d-flex justify-content-between mb-2">
                     <input type="color" class="form-control form-control-color card-color" 
                            value="#0d6efd" title="${t.cardColor}">
+                    <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.experiencia-item').remove(); atualizarPrevia();">
+                        <i class="fas fa-trash"></i>
+                    </button>
                 </div>
                 <input type="text" class="form-control mb-2" placeholder="Empresa" title="Nome da Empresa">
                 <input type="text" class="form-control mb-2" placeholder="Cargo" title="Cargo">
@@ -598,7 +601,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <textarea class="form-control mb-2" placeholder="Descrição das atividades" title="Descrição"></textarea>
-                <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.experiencia-item').remove(); atualizarPrevia();">${t.buttons.remove}</button>
             </div>
         `;
     }
@@ -608,9 +610,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const t = translations[idioma].labels;
         return `
             <div class="educacao-item">
-                <div class="d-flex justify-content-end mb-2">
+                <div class="d-flex justify-content-between mb-2">
                     <input type="color" class="form-control form-control-color card-color" 
                            value="#0d6efd" title="${t.cardColor}">
+                    <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.educacao-item').remove(); atualizarPrevia();">
+                        <i class="fas fa-trash"></i>
+                    </button>
                 </div>
                 <input type="text" class="form-control mb-2" placeholder="Instituição" title="Instituição">
                 <input type="text" class="form-control mb-2" placeholder="Curso" title="Curso">
@@ -622,7 +627,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="month" class="form-control" placeholder="Data Fim" title="Data Fim">
                     </div>
                 </div>
-                <button type="button" class="btn btn-danger btn-sm remove-item" onclick="this.closest('.educacao-item').remove(); atualizarPrevia();">${t.buttons.remove}</button>
             </div>
         `;
     }
@@ -1187,5 +1191,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar a tradução
     document.addEventListener('DOMContentLoaded', function() {
         atualizarIdioma();
+
+        // Inicializar anúncios do AdSense
+        try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+            console.error('Erro ao inicializar AdSense:', e);
+        }
     });
 }); 

@@ -652,4 +652,28 @@ a, .text-primary {
 /* Ajuste para o ícone e texto "atual" */
 .periodo i {
     margin-right: 5px;
+}
+
+/* Containers de Anúncios */
+.ad-container {
+    min-height: 100px;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.ad-top, .ad-bottom {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+/* Modo Escuro para Anúncios */
+[data-theme="dark"] .ad-container {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Footer no modo escuro */
+[data-theme="dark"] footer .text-muted {
+    color: #a0a0a0 !important;
 } 
